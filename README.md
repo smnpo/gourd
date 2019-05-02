@@ -1,2 +1,10 @@
-# gourd
-a component for soa serivce base on message middleware(eg.kafka,rocketmq,...)
+# 葫芦瓜 gourd
+
+## 初衷
+- Gourd是消息中间件（kafka、RocketMQ等）的扩展应用
+- Gourd是一种“平台消息总线”的设计和实现方案
+- Gourd软件瓜系列SOA服务治理平台组件中最核心的组件，没有之一
+- Gourd希望普及一些消息中间件使用的规范做法，和高级应用扩展思路
+
+## 介绍
+*应用之间使用消息中间件进行即时异步交互是基本操作，Gourd
