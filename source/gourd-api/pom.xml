@@ -13,7 +13,7 @@
 
     <properties>
         <springboot.version>1.5.18.RELEASE</springboot.version>
-        <swagger2.version>2.9.2</swagger2.version>
+        <swagger2.version>2.6.1</swagger2.version>
     </properties>
 
     <dependencies>
@@ -31,18 +31,25 @@
             <version>${springboot.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${swagger2.version}</version>
-        </dependency>
-
         <!-- http://maven.develophelper.com/repository/maven-public/ -->
         <dependency>
             <groupId>io.github.smnpo</groupId>
             <artifactId>smnpo-swagger-starter</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-configuration-processor</artifactId>-->
+            <!--<version>${springboot.version}</version>-->
+            <!--<optional>true</optional>-->
+        <!--</dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger2.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
