@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.smnpo</groupId>
+    <artifactId>sm-gourd</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>sm-gourd-facade</module>
+        <module>sm-gourd-console</module>
+        <module>sm-gourd-broker</module>
+        <module>sm-gourd-console</module>
+        <module>sm-gourd-databus</module>
+        <module>sm-gourd-checker</module>
+        <module>sm-gourd-components</module>
+    </modules>
+
+
+</project>
