@@ -24,4 +24,18 @@
         <module>sm-gourd-components</module>
     </modules>
 
+    <repositories>
+        <repository>
+            <id>personal_maven_repository</id>
+            <name>personal maven repository</name>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <url>http://maven.develophelper.com/repository/maven-public/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
 </project>
