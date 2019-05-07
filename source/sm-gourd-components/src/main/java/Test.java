@@ -23,8 +23,8 @@ public class Test {
 
         try {
             GroovyScriptEngine gse = new GroovyScriptEngine(roots);
-            GroovyObject groovyObject = (GroovyObject) gse.loadScriptByName("TestScript.groovy").newInstance();
-            GroovyTest gt  = (GroovyTest) gse.loadScriptByName("TestScript.groovy").newInstance();
+            GroovyObject groovyObject = (GroovyObject) gse.loadScriptByName("src/main/java/TestScript.groovy").newInstance();
+            GroovyTest gt  = (GroovyTest) gse.loadScriptByName("src/main/java/TestScript.groovy").newInstance();
             System.out.println( gt.output("5555"));
             String result = (String) groovyObject.invokeMethod("output", "hello");
             System.out.println(result);
