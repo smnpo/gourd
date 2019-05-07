@@ -37,16 +37,11 @@
     </properties>
 
     <dependencies>
-
-
-
         <dependency>
             <groupId>org.apache.xbean</groupId>
             <artifactId>xbean-spring</artifactId>
             <version>${xbean-spring-version}</version>
         </dependency>
-
-
 
     </dependencies>
 
