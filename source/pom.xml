@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!--<parent>-->
-        <!--<groupId>io.github.smnpo</groupId>-->
-        <!--<artifactId>smnpo-springboot-parent</artifactId>-->
-        <!--<version>1.0-SNAPSHOT</version>-->
-    <!--</parent>-->
+    <parent>
+        <groupId>io.github.smnpo</groupId>
+        <artifactId>smnpo-springboot-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
     <groupId>org.smnpo</groupId>
     <artifactId>sm-gourd</artifactId>
@@ -26,16 +26,24 @@
 
     <repositories>
         <repository>
-            <id>personal_maven_repository</id>
-            <name>personal maven repository</name>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/71943-release-LWfjuf/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
             <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/71943-snapshot-gMBvZN/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-            <url>http://maven.develophelper.com/repository/maven-public/</url>
-            <layout>default</layout>
         </repository>
     </repositories>
 </project>
