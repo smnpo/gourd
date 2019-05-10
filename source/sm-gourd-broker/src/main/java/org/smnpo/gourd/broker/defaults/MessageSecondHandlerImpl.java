@@ -6,17 +6,15 @@ import org.smnpo.gourd.broker.core.models.CaseVO;
 import org.springframework.stereotype.Component;
 
 /**
- *
- *
- * @ClassName    : 	MessageSecondHandlerImpl
+ * @author :	xing.chen
+ * @ClassName : 	MessageSecondHandlerImpl
  * @Description : 	TODO
- * @author        :	xing.chen
- * @date        :	2019/5/8
- *
+ * @date :	2019/5/8
  */
 @Component("messageSecondHandlerImpl")
 public class MessageSecondHandlerImpl implements MessageSecondHandler {
-    @Override public <T> Action secondSend(CaseVO<T> caseVO) {
+    @Override
+    public <T> Action secondSend(CaseVO<T> caseVO) {
         return null;
     }
 }

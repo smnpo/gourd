@@ -6,26 +6,23 @@ import groovy.util.ScriptException;
 import java.io.IOException;
 
 /**
- *
- *
- * @ClassName    : 	Test
+ * @author :	xing.chen
+ * @ClassName : 	Test
  * @Description : 	TODO
- * @author        :	xing.chen
- * @date        :	2019/5/6
- *
+ * @date :	2019/5/6
  */
 
 public class Test {
-    public static void main(String[] ages){
+    public static void main(String[] ages) {
         System.out.println("3333");
-        String[] roots = new String[] { "src/main/java/" };
+        String[] roots = new String[]{"src/main/java/"};
         //通过指定的roots来初始化GroovyScriptEngine
 
         try {
             GroovyScriptEngine gse = new GroovyScriptEngine(roots);
             GroovyObject groovyObject = (GroovyObject) gse.loadScriptByName("src/main/java/TestScript.groovy").newInstance();
-            GroovyTest gt  = (GroovyTest) gse.loadScriptByName("src/main/java/TestScript.groovy").newInstance();
-            System.out.println( gt.output("5555"));
+            GroovyTest gt = (GroovyTest) gse.loadScriptByName("src/main/java/TestScript.groovy").newInstance();
+            System.out.println(gt.output("5555"));
             String result = (String) groovyObject.invokeMethod("output", "hello");
             System.out.println(result);
 

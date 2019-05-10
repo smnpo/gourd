@@ -11,20 +11,20 @@ import java.util.concurrent.ThreadPoolExecutor;
 @Configuration
 @EnableAsync
 public class ThreadPoolConfiguration {
-    
+
     @Value("${pool.growth.CorePoolSize:5}")
-    private int growthCorePoolSize  = 5;
+    private int growthCorePoolSize = 5;
 
     @Value("${pool.growth.MaxPoolSize:30}")
-    private int growthMaxPoolSize   = 30;
+    private int growthMaxPoolSize = 30;
 
     @Value("${pool.growth.QueueCapacity:15}")
     private int growthQueueCapacity = 15;
 
     @Value("${pool.growth.KeepAlive:60}")
-    private int growthKeepAlive     = 60;
-    
-    
+    private int growthKeepAlive = 60;
+
+
     @Bean("dispatchExecutor")
     public ThreadPoolTaskExecutor createThreadPoolExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
@@ -32,10 +32,10 @@ public class ThreadPoolConfiguration {
         executor.setMaxPoolSize(growthMaxPoolSize);
         executor.setQueueCapacity(growthQueueCapacity);
         executor.setThreadNamePrefix("Task-Executor-");
-        executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy()); 
+        executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
         executor.setKeepAliveSeconds(growthKeepAlive);
         executor.initialize();
         return executor;
     }
-    
+
 }

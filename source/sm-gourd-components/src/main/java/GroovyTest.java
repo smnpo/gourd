@@ -1,11 +1,8 @@
 /**
- *
- *
- * @ClassName    : 	GroovyTest
+ * @author :	xing.chen
+ * @ClassName : 	GroovyTest
  * @Description : 	TODO
- * @author        :	xing.chen
- * @date        :	2019/5/6
- *
+ * @date :	2019/5/6
  */
 
 public interface GroovyTest {

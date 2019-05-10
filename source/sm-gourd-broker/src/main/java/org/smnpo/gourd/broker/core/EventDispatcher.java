@@ -11,13 +11,10 @@ import javax.annotation.Resource;
 import java.util.Map;
 
 /**
- *
- *
- * @ClassName    : 	EventDispatcher
+ * @author :	xing.chen
+ * @ClassName : 	EventDispatcher
  * @Description : 	TODO
- * @author        :	xing.chen
- * @date        :	2019/5/8
- *
+ * @date :	2019/5/8
  */
 @Component
 public class EventDispatcher {
@@ -32,7 +29,7 @@ public class EventDispatcher {
     ThreadPoolTaskExecutor dispatchExecutor;
 
 
-    void dispatch(CaseVO caseVO){
+    void dispatch(CaseVO caseVO) {
         confighandler.initSunMsgConfigs(caseVO);
 
         Map<String, MessageVO> subMessages = caseVO.getSubMsgs();

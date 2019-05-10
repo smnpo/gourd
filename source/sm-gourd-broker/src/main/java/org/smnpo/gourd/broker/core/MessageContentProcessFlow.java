@@ -7,13 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- *
- *
- * @ClassName    : 	EventProcessFlow
+ * @author :	xing.chen
+ * @ClassName : 	EventProcessFlow
  * @Description : 	TODO
- * @author        :	xing.chen
- * @date        :	2019/5/8
- *
+ * @date :	2019/5/8
  */
 
 @Component
@@ -23,19 +20,18 @@ public class MessageContentProcessFlow {
     private ComponentBox componentBox;
 
 
+    public <T> void extensionProcess(CaseVO<T> caseVO, boolean isMain, String eventNo) {
 
-    public <T>void extensionProcess(CaseVO<T> caseVO,boolean isMain,String eventNo){
 
+        MessageConfigVO configVO = caseVO.getMainMessageVO().getConfigVO();
 
-        MessageConfigVO configVO =  caseVO.getMainMessageVO().getConfigVO();
-
-        if(!componentBox.getFilter(configVO).filter(caseVO,isMain,eventNo)){
-            return ;
+        if (!componentBox.getFilter(configVO).filter(caseVO, isMain, eventNo)) {
+            return;
         }
 
-        componentBox.getSupplyHandler(configVO).handle(caseVO,isMain,eventNo);
+        componentBox.getSupplyHandler(configVO).handle(caseVO, isMain, eventNo);
 
-        componentBox.getConverter(configVO).convert(caseVO,isMain,eventNo);
+        componentBox.getConverter(configVO).convert(caseVO, isMain, eventNo);
 
     }
 

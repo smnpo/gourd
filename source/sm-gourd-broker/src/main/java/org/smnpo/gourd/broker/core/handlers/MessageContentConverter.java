@@ -6,5 +6,5 @@ public interface MessageContentConverter {
 
     boolean preCheck();
 
-    <T>boolean convert(CaseVO<T> caseVO,boolean isMain,String eventNo);
+    <T> boolean convert(CaseVO<T> caseVO, boolean isMain, String eventNo);
 }

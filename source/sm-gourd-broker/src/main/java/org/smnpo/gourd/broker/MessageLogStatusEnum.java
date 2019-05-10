@@ -8,11 +8,11 @@ public enum MessageLogStatusEnum {
 
     private int code;
 
-    MessageLogStatusEnum(int code){
+    MessageLogStatusEnum(int code) {
         this.code = code;
     }
 
-    public int getCode(){
+    public int getCode() {
         return code;
     }
 }

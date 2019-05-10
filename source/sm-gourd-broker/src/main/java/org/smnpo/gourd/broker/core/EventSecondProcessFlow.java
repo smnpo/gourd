@@ -8,28 +8,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- *
- *
- * @ClassName    : 	EventProcessFlowStepTwo
+ * @author :	xing.chen
+ * @ClassName : 	EventProcessFlowStepTwo
  * @Description : 	TODO
- * @author        :	xing.chen
- * @date        :	2019/5/8
- *
+ * @date :	2019/5/8
  */
 @Component
 public class EventSecondProcessFlow {
 
-    @Autowired private MessageLogHandler messageLogHandler;
+    @Autowired
+    private MessageLogHandler messageLogHandler;
 
-    @Autowired private MessageContentProcessFlow contentProcessFlow;
+    @Autowired
+    private MessageContentProcessFlow contentProcessFlow;
 
-    @Autowired private MessageSecondHandler secondHandler;
+    @Autowired
+    private MessageSecondHandler secondHandler;
 
-    public <T> Action processSubMessage(CaseVO<T> caseVO,String subEventNo) {
+    public <T> Action processSubMessage(CaseVO<T> caseVO, String subEventNo) {
 
-        contentProcessFlow.extensionProcess(caseVO,false,subEventNo);
+        contentProcessFlow.extensionProcess(caseVO, false, subEventNo);
 
-        messageLogHandler.createSubMsgLogRecord(caseVO,subEventNo);
+        messageLogHandler.createSubMsgLogRecord(caseVO, subEventNo);
 
         return secondHandler.secondSend(caseVO);
     }

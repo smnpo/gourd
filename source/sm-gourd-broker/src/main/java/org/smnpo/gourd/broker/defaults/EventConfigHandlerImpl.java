@@ -5,22 +5,21 @@ import org.smnpo.gourd.broker.core.models.CaseVO;
 import org.springframework.stereotype.Component;
 
 /**
- *
- *
- * @ClassName    : 	EventConfigHandlerImpl
+ * @author :	xing.chen
+ * @ClassName : 	EventConfigHandlerImpl
  * @Description : 	TODO
- * @author        :	xing.chen
- * @date        :	2019/5/8
- *
+ * @date :	2019/5/8
  */
 @Component("eventConfigHandlerImpl")
 public class EventConfigHandlerImpl implements EventConfigHandler {
 
-    @Override public <T> void initMainMsgConfig(CaseVO<T> caseVO) {
+    @Override
+    public <T> void initMainMsgConfig(CaseVO<T> caseVO) {
 
     }
 
-    @Override public <T> void initSunMsgConfigs(CaseVO<T> caseVO) {
+    @Override
+    public <T> void initSunMsgConfigs(CaseVO<T> caseVO) {
 
     }
 }

@@ -33,11 +33,11 @@ public class MsgDTO implements Serializable {
     private String source;
 
     @ApiModelProperty(
-            value = "消息编码",
+            value = "事件码",
             required = true,
             example = "E00001"
     )
-    @NotBlank(message = "消息编码不能为空")
+    @NotBlank(message = "事件码不能为空")
     private String eventNo;
 
     @ApiModelProperty(

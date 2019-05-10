@@ -12,13 +12,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
- *
- * @ClassName    : 	ComponentBox
+ * @author :	xing.chen
+ * @ClassName : 	ComponentBox
  * @Description : 	TODO
- * @author        :	xing.chen
- * @date        :	2019/5/8
- *
+ * @date :	2019/5/8
  */
 @Component
 public class ComponentBox {
@@ -30,38 +27,40 @@ public class ComponentBox {
     @Autowired
     private Map<String, MessageContentConverter> converterMap = new HashMap<>();
 
-    public MessageContentFilter getFilter(MessageConfigVO configVO){
+    public MessageContentFilter getFilter(MessageConfigVO configVO) {
 
-        if(StringUtils.isEmpty(configVO.getFilter())||filterMap.get(configVO.getFilter())!=null){
+        if (StringUtils.isEmpty(configVO.getFilter()) || filterMap.get(configVO.getFilter()) != null) {
             return filterMap.get("messageContentFilterImpl");
-        }else{
-            if(filterMap.get(configVO.getFilter()).preCheck()){
+        } else {
+            if (filterMap.get(configVO.getFilter()).preCheck()) {
                 return filterMap.get(configVO.getFilter());
-            }else{
+            } else {
                 return filterMap.get("messageContentFilterImpl");
             }
         }
     }
-    public MessageContentSupplyHandler getSupplyHandler(MessageConfigVO configVO){
 
-        if(StringUtils.isEmpty(configVO.getFilter())||supplyHandlerMap.get(configVO.getSupplement())!=null){
+    public MessageContentSupplyHandler getSupplyHandler(MessageConfigVO configVO) {
+
+        if (StringUtils.isEmpty(configVO.getFilter()) || supplyHandlerMap.get(configVO.getSupplement()) != null) {
             return supplyHandlerMap.get("messageContentSupplyHandlerImpl");
-        }else{
-            if(supplyHandlerMap.get(configVO.getSupplement()).preCheck()){
+        } else {
+            if (supplyHandlerMap.get(configVO.getSupplement()).preCheck()) {
                 return supplyHandlerMap.get(configVO.getSupplement());
-            }else{
+            } else {
                 return supplyHandlerMap.get("messageContentSupplyHandlerImpl");
             }
         }
     }
-    public MessageContentConverter getConverter(MessageConfigVO configVO){
 
-        if(StringUtils.isEmpty(configVO.getConverter())||converterMap.get(configVO.getConverter())!=null){
+    public MessageContentConverter getConverter(MessageConfigVO configVO) {
+
+        if (StringUtils.isEmpty(configVO.getConverter()) || converterMap.get(configVO.getConverter()) != null) {
             return converterMap.get("messageContentConverterImpl");
-        }else{
-            if(converterMap.get(configVO.getConverter()).preCheck()){
+        } else {
+            if (converterMap.get(configVO.getConverter()).preCheck()) {
                 return converterMap.get(configVO.getConverter());
-            }else{
+            } else {
                 return converterMap.get("messageContentConverterImpl");
             }
         }

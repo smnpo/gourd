@@ -9,13 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- *
- *
- * @ClassName    : 	EventProcessBox
+ * @author :	xing.chen
+ * @ClassName : 	EventProcessBox
  * @Description : 	TODO
- * @author        :	xing.chen
- * @date        :	2019/5/8
- *
+ * @date :	2019/5/8
  */
 @Component
 public class EventFirstProcessFlow<T> {
@@ -33,7 +30,7 @@ public class EventFirstProcessFlow<T> {
     private EventConfigHandler confighandler;
 
 
-    public Action processMainMessage(T message,String msgId ){
+    public Action processMainMessage(T message, String msgId) {
 
         messageLogHandler.updateStatusToMainMsgLog(msgId, MessageLogStatusEnum.RECEIVE.getCode());
 
@@ -41,14 +38,14 @@ public class EventFirstProcessFlow<T> {
 
         confighandler.initMainMsgConfig(caseVO);
 
-        contentProcessFlow.extensionProcess(caseVO,true,caseVO.getMainEventNO());
+        contentProcessFlow.extensionProcess(caseVO, true, caseVO.getMainEventNO());
 
         eventDispatcher.dispatch(caseVO);
 
         return Action.CommitMessage;
     }
 
-    private CaseVO converter(T message){
+    private CaseVO converter(T message) {
 
         return null;
     }
