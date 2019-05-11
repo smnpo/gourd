@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
  * @create: 2019-05-10 16:16
  **/
 @Repository
-public interface MsgRepository extends MongoRepository<MsgDO, Long> {
+public interface MsgRepository extends MongoRepository<MsgDO, String> {
 
 }

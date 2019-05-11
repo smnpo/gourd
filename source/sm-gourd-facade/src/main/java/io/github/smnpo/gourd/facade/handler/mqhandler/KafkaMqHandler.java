@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Component
 @ConditionalOnProperty(
         prefix = "kafka.producer",
-        name = {"id"}
+        name = "id"
 )
 public class KafkaMqHandler implements MqHandler {
 

@@ -15,7 +15,7 @@ import java.util.Date;
 @Document(collection = "message_facade")
 public class MsgDO {
     @Id
-    private Long id;
+    private String id;
 
     private MsgDTO msgData;
 
