@@ -5,11 +5,9 @@ import com.aliyun.openservices.ons.api.Message;
 import com.aliyun.openservices.ons.api.Producer;
 import io.github.smnpo.gourd.facade.dto.MsgDTO;
 import io.github.smnpo.gourd.facade.handler.MqHandler;
-import io.github.smnpo.rocketmq.ProducerAutoConfiguration;
+import io.github.smnpo.message.rocketmq.ProducerAutoConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 /**
@@ -17,6 +15,10 @@ import org.springframework.stereotype.Component;
  * @create: 2019-05-08 16:25
  **/
 @Component
+//@ConditionalOnProperty(
+//        prefix = "rocketmq.producer",
+//        name = {"id"}
+//)
 @ConditionalOnBean(ProducerAutoConfiguration.class)
 public class RocketMqHandler implements MqHandler {
 

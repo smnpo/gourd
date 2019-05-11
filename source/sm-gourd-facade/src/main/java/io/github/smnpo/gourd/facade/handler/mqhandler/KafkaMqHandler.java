@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import io.github.smnpo.gourd.facade.dto.MsgDTO;
 import io.github.smnpo.gourd.facade.handler.MqHandler;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +13,10 @@ import org.springframework.stereotype.Component;
  * @create: 2019-05-10 15:02
  **/
 @Component
-@ConditionalOnBean(KafkaTemplate.class)
+@ConditionalOnProperty(
+        prefix = "kafka.producer",
+        name = {"id"}
+)
 public class KafkaMqHandler implements MqHandler {
 
     @Autowired

@@ -7,7 +7,9 @@ import io.github.smnpo.common.restful.Code;
  * @create: 2019-05-08 11:34
  **/
 public enum CodeEnum implements Code {
-    SUCCESS(0, "success");
+    SUCCESS(0, "success"),
+    MQ_NOT_CONFIG(1, "未配置消息队列"),
+    DB_NOT_CONFIG(2, "未配置数据库");
 
     // add code enums here
 

@@ -22,16 +22,12 @@
     <parent>
         <groupId>io.github.smnpo</groupId>
         <artifactId>smnpo-springboot-parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>0.0.1</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>sm-gourd-facade</artifactId>
     <packaging>jar</packaging>
-
-    <properties>
-        <smnpo.version>1.0-SNAPSHOT</smnpo.version>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -44,32 +40,38 @@
             <artifactId>smnpo-swagger-starter</artifactId>
             <version>${smnpo.version}</version>
         </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>io.springfox</groupId>-->
+            <!--<artifactId>springfox-swagger2</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>io.springfox</groupId>-->
+            <!--<artifactId>springfox-swagger-ui</artifactId>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
-            <version>2.2.4.RELEASE</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.kafka</groupId>-->
+            <!--<artifactId>spring-kafka</artifactId>-->
+            <!--<version>2.2.4.RELEASE</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>com.aliyun.openservices</groupId>
-            <artifactId>ons-client</artifactId>
-            <version>1.8.0.Final</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.aliyun.openservices</groupId>-->
+            <!--<artifactId>ons-client</artifactId>-->
+            <!--<version>1.8.0.Final</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>io.github.smnpo</groupId>
-            <artifactId>smnpo-rocketmq-starter</artifactId>
+            <artifactId>smnpo-message-starter</artifactId>
             <version>${smnpo.version}</version>
         </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>com.zhangmen.boot</groupId>-->
+            <!--<artifactId>aliyun-mq-spring-boot-starter</artifactId>-->
+            <!--<version>1.2</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
