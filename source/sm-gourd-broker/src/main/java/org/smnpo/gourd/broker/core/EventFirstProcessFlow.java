@@ -2,6 +2,9 @@ package org.smnpo.gourd.broker.core;
 
 import com.aliyun.openservices.ons.api.Action;
 import org.smnpo.gourd.broker.MessageLogStatusEnum;
+import org.smnpo.gourd.interfaces.EventConfigHandler;
+import org.smnpo.gourd.interfaces.MessageLogHandler;
+import org.smnpo.gourd.models.CaseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -24,7 +27,7 @@ public class EventFirstProcessFlow<T> {
     private EventDispatcher eventDispatcher;
 
     @Autowired
-    private EventConfigHandler confighandler;
+    private EventConfigHandler configHandler;
 
 
     public Action processMainMessage(T message, String msgId) {
@@ -33,7 +36,7 @@ public class EventFirstProcessFlow<T> {
 
         CaseVO<T> caseVO = converter(message);
 
-        confighandler.initMainMsgConfig(caseVO);
+        configHandler.initMainMsgConfig(caseVO);
 
         contentProcessFlow.extensionProcess(caseVO, true, caseVO.getMainEventNO());
 

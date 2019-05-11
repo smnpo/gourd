@@ -19,7 +19,7 @@ import java.util.Map;
 @Component
 public class EventDispatcher {
     @Autowired
-    private EventConfigHandler confighandler;
+    private EventConfigHandler configHandler;
 
     @Autowired
     private EventSecondProcessFlow secondProcessFlow;
@@ -30,7 +30,7 @@ public class EventDispatcher {
 
 
     void dispatch(CaseVO caseVO) {
-        confighandler.initSunMsgConfigs(caseVO);
+        configHandler.initSunMsgConfigs(caseVO);
 
         Map<String, MessageVO> subMessages = caseVO.getSubMsgs();
 

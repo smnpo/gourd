@@ -14,12 +14,10 @@ import org.springframework.stereotype.Component;
 @Component("messageLogHandlerImpl")
 public class MessageLogHandlerImpl implements MessageLogHandler {
 
-    @Override
     public void updateStatusToMainMsgLog(String msgId, int status) {
 
     }
 
-    @Override
     public <T> void createSubMsgLogRecord(CaseVO<T> caseVO, String subEventNo) {
 
     }

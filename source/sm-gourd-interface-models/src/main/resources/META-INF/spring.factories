@@ -1,10 +1,6 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-org.smnpo.gourd.defaule.EventConfigHandlerImpl
-org.smnpo.gourd.defaule.MessageContentConverterImpl
-org.smnpo.gourd.defaule.MessageContentFilterImpl
-org.smnpo.gourd.defaule.MessageContentSupplyHandlerImpl
-org.smnpo.gourd.defaule.MessageLogHandlerImpl
-org.smnpo.gourd.defaule.MessageSecondHandlerImpl
+org.smnpo.gourd.defaule.CompomemtsAutoScanConfig
+
 
 
 
