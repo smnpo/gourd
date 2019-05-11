@@ -1,8 +1,7 @@
 package org.smnpo.gourd.broker.core;
 
-import org.smnpo.gourd.broker.core.handlers.*;
-import org.smnpo.gourd.broker.core.models.CaseVO;
-import org.smnpo.gourd.broker.core.models.MessageConfigVO;
+import org.smnpo.gourd.models.CaseVO;
+import org.smnpo.gourd.models.MessageConfigVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

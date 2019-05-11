@@ -22,6 +22,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: io.github.smnpo:smnpo-common:0.0.1" level="project" />
     <orderEntry type="library" name="Maven: io.github.smnpo:smnpo-swagger-starter:0.0.1" level="project" />
+    <orderEntry type="library" name="Maven: io.github.smnpo:smnpo-common:0.0.1" level="project" />
+    <orderEntry type="library" name="Maven: io.github.smnpo:smnpo-swagger-starter:0.0.1" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger2:2.7.0" level="project" />
     <orderEntry type="library" name="Maven: io.swagger:swagger-annotations:1.5.13" level="project" />
     <orderEntry type="library" name="Maven: io.swagger:swagger-models:1.5.13" level="project" />

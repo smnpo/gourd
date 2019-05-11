@@ -17,10 +17,10 @@
         <module>sm-gourd-facade</module>
         <module>sm-gourd-console</module>
         <module>sm-gourd-broker</module>
-        <module>sm-gourd-console</module>
         <module>sm-gourd-databus</module>
         <module>sm-gourd-checker</module>
         <module>sm-gourd-components</module>
+        <module>sm-gourd-interface-models</module>
     </modules>
 
     <repositories>

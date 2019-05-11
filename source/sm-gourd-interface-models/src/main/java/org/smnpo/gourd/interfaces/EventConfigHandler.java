@@ -1,9 +1,9 @@
-package org.smnpo.gourd.broker.core.handlers;
+package org.smnpo.gourd.interfaces;
 
-import org.smnpo.gourd.broker.core.models.CaseVO;
-import org.springframework.stereotype.Component;
+import org.smnpo.gourd.models.CaseVO;
 
 public interface EventConfigHandler {
+
     <T> void initMainMsgConfig(CaseVO<T> caseVO);
 
     <T> void initSunMsgConfigs(CaseVO<T> caseVO);

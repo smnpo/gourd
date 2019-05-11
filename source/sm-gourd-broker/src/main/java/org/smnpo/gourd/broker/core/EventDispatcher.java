@@ -1,8 +1,8 @@
 package org.smnpo.gourd.broker.core;
 
-import org.smnpo.gourd.broker.core.handlers.EventConfigHandler;
-import org.smnpo.gourd.broker.core.models.CaseVO;
-import org.smnpo.gourd.broker.core.models.MessageVO;
+import org.smnpo.gourd.interfaces.EventConfigHandler;
+import org.smnpo.gourd.models.CaseVO;
+import org.smnpo.gourd.models.MessageVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;

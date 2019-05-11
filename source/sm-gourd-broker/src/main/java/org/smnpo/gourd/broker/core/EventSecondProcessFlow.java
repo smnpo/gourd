@@ -1,9 +1,9 @@
 package org.smnpo.gourd.broker.core;
 
 import com.aliyun.openservices.ons.api.Action;
-import org.smnpo.gourd.broker.core.handlers.MessageLogHandler;
-import org.smnpo.gourd.broker.core.handlers.MessageSecondHandler;
-import org.smnpo.gourd.broker.core.models.CaseVO;
+import org.smnpo.gourd.interfaces.MessageLogHandler;
+import org.smnpo.gourd.interfaces.MessageSecondHandler;
+import org.smnpo.gourd.models.CaseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -23,7 +23,7 @@ public class EventSecondProcessFlow {
     private MessageContentProcessFlow contentProcessFlow;
 
     @Autowired
-    private MessageSecondHandler secondHandler;
+    private MessageSecondHandler<Action> secondHandler;
 
     public <T> Action processSubMessage(CaseVO<T> caseVO, String subEventNo) {
 

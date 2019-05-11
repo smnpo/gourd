@@ -1,14 +1,13 @@
 package org.smnpo.gourd.broker.core;
 
-import org.smnpo.gourd.broker.core.handlers.MessageContentConverter;
-import org.smnpo.gourd.broker.core.handlers.MessageContentFilter;
-import org.smnpo.gourd.broker.core.handlers.MessageContentSupplyHandler;
-import org.smnpo.gourd.broker.core.models.MessageConfigVO;
+import org.smnpo.gourd.interfaces.MessageContentConverter;
+import org.smnpo.gourd.interfaces.MessageContentFilter;
+import org.smnpo.gourd.interfaces.MessageContentSupplyHandler;
+import org.smnpo.gourd.models.MessageConfigVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -21,11 +20,11 @@ import java.util.Map;
 public class ComponentBox {
 
     @Autowired
-    private Map<String, MessageContentFilter> filterMap = new HashMap<>();
+    private Map<String, MessageContentFilter>        filterMap;
     @Autowired
-    private Map<String, MessageContentSupplyHandler> supplyHandlerMap = new HashMap<>();
+    private Map<String, MessageContentSupplyHandler> supplyHandlerMap;
     @Autowired
-    private Map<String, MessageContentConverter> converterMap = new HashMap<>();
+    private Map<String, MessageContentConverter>     converterMap;
 
     public MessageContentFilter getFilter(MessageConfigVO configVO) {
 

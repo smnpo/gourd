@@ -1,8 +1,7 @@
-package org.smnpo.gourd.broker.defaults;
+package org.smnpo.gourd.defaule;
 
-import com.aliyun.openservices.ons.api.Action;
-import org.smnpo.gourd.broker.core.handlers.MessageSecondHandler;
-import org.smnpo.gourd.broker.core.models.CaseVO;
+import org.smnpo.gourd.interfaces.MessageSecondHandler;
+import org.smnpo.gourd.models.CaseVO;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,7 +11,7 @@ import org.springframework.stereotype.Component;
  * @date :	2019/5/8
  */
 @Component("messageSecondHandlerImpl")
-public class MessageSecondHandlerImpl implements MessageSecondHandler {
+public class MessageSecondHandlerImpl<Action> implements MessageSecondHandler<Action> {
     @Override
     public <T> Action secondSend(CaseVO<T> caseVO) {
         return null;

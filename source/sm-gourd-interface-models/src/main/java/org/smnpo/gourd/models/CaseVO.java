@@ -1,6 +1,5 @@
-package org.smnpo.gourd.broker.core.models;
+package org.smnpo.gourd.models;
 
-import com.aliyun.openservices.ons.api.Message;
 import lombok.Data;
 
 import java.util.Map;
