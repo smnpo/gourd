@@ -1,8 +1,8 @@
 package org.smnpo.gourd.broker.core;
 
-import org.smnpo.gourd.broker.core.handlers.EventConfigHandler;
-import org.smnpo.gourd.broker.core.models.CaseVO;
-import org.smnpo.gourd.broker.core.models.MessageVO;
+import org.smnpo.gourd.interfaces.EventConfigHandler;
+import org.smnpo.gourd.models.CaseVO;
+import org.smnpo.gourd.models.MessageVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
@@ -19,7 +19,7 @@ import java.util.Map;
 @Component
 public class EventDispatcher {
     @Autowired
-    private EventConfigHandler confighandler;
+    private EventConfigHandler configHandler;
 
     @Autowired
     private EventSecondProcessFlow secondProcessFlow;
@@ -30,7 +30,7 @@ public class EventDispatcher {
 
 
     void dispatch(CaseVO caseVO) {
-        confighandler.initSunMsgConfigs(caseVO);
+        configHandler.initSunMsgConfigs(caseVO);
 
         Map<String, MessageVO> subMessages = caseVO.getSubMsgs();
 

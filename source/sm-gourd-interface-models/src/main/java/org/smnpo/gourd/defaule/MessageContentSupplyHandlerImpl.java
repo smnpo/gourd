@@ -1,7 +1,7 @@
-package org.smnpo.gourd.broker.defaults;
+package org.smnpo.gourd.defaule;
 
-import org.smnpo.gourd.broker.core.handlers.MessageContentSupplyHandler;
-import org.smnpo.gourd.broker.core.models.CaseVO;
+import org.smnpo.gourd.interfaces.MessageContentSupplyHandler;
+import org.smnpo.gourd.models.CaseVO;
 import org.springframework.stereotype.Component;
 
 /**

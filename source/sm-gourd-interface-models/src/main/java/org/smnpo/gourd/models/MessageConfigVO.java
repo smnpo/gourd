@@ -1,4 +1,4 @@
-package org.smnpo.gourd.broker.core.models;
+package org.smnpo.gourd.models;
 
 import lombok.Data;
 

@@ -4,7 +4,7 @@ import com.aliyun.openservices.ons.api.Action;
 import com.aliyun.openservices.ons.api.ConsumeContext;
 import com.aliyun.openservices.ons.api.Message;
 import com.aliyun.openservices.ons.api.MessageListener;
-import io.github.smnpo.rocketmq.annotation.ConsumerListener;
+import io.github.smnpo.message.rocketmq.annotation.ConsumerListener;
 import lombok.extern.slf4j.Slf4j;
 import org.smnpo.gourd.broker.core.EventFirstProcessFlow;
 import org.springframework.beans.factory.annotation.Autowired;

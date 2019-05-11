@@ -1,6 +1,6 @@
-package org.smnpo.gourd.broker.core.handlers;
+package org.smnpo.gourd.interfaces;
 
-import org.smnpo.gourd.broker.core.models.CaseVO;
+import org.smnpo.gourd.models.CaseVO;
 
 /**
  * @author :	xing.chen
